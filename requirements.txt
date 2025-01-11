@@ -5,8 +5,11 @@ langsmith
 langchain-community
 langchain-core
 langchain-openai
+langchain-google-vertexai
 notebook
 tavily-python
 wikipedia
 trustcall
 langgraph-cli
+python-dotenv
+google-cloud-aiplatform[reasoningengine,langchain]
