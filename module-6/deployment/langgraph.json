@@ -6,5 +6,6 @@
     "python_version": "3.11",
     "dependencies": [
       "."
-    ]
+    ],
+    "disable_studio_auth": false
   }
