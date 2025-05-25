@@ -17,13 +17,13 @@ vertex_bucket = os.getenv("VERTEXAI_GCP_BUCKET")
 vertexai.init(
     project=vertex_project_id,
     location=vertex_location,
-    staging_bucket=f"gs://{vertex_bucket}",
+    #staging_bucket=f"gs://{vertex_bucket}",
 )
 
 # Define model
 model = "gemini-1.5-flash-001"
 
-# (Optional) Configure Saftey settings of model 
+# (Optional) Configure Saftey settings of model
 safety_settings = {
     HarmCategory.HARM_CATEGORY_UNSPECIFIED: HarmBlockThreshold.BLOCK_NONE,
     HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
@@ -56,7 +56,7 @@ model_kwargs = {
 
 # Instantiate model
 llm = ChatVertexAI(
-    model=model, 
+    model=model,
     model_kwargs=model_kwargs
 )
 
